@@ -1,0 +1,6 @@
+FROM ubuntu:19.10
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get -q update && \
+    apt-get install -y -q curl ca-certificates build-essential libsystemd-dev cmake make bash sudo wget unzip nano vim valgrind dh-make flex bison && \
+    apt-get install -y -q --reinstall lsb-base lsb-release
